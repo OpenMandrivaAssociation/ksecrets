@@ -1,7 +1,8 @@
 Name:		ksecrets
 Version:	4.8.2
-Release:	%mkrel 1
+Release:	1
 Summary:	Secrets management infrastructure for KDE4
+Group:		Graphical desktop/KDE
 # libksecretservice LGPLv2+, most of the rest is GPLv2+
 License:	GPLv2+ and LGPLv2+
 URL:		https://projects.kde.org/projects/kde/kdeutils/ksecrets
@@ -55,6 +56,7 @@ Runtime library for KSecrets.
 
 %package devel
 Summary:	Development files for %{name}
+Group:		Development/KDE and Qt
 Requires:	%{libksecretsservice} = %{EVRD}
 Requires:	kdelibs4-devel
 
@@ -76,9 +78,5 @@ Requires:	kdelibs4-devel
 %make
 
 %install
-%__rm -rf %{buildroot}
 %makeinstall_std -C build
-
-%clean
-%__rm -rf %{buildroot}
 
