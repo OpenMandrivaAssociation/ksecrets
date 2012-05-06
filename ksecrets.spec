@@ -1,5 +1,5 @@
 Name:		ksecrets
-Version:	4.8.2
+Version:	4.8.3
 Release:	1
 Summary:	Secrets management infrastructure for KDE4
 Group:		Graphical desktop/KDE
@@ -7,11 +7,6 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+ and LGPLv2+
 URL:		https://projects.kde.org/projects/kde/kdeutils/ksecrets
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
-# mark ksecrets.desktop NoDisplay=true since
-# 1.  it lacks Categories and appears in Lost+Found
-# 2.  afaict it's not useful in the menu
-#     (run without arguments does nothing but show --help)
-Patch50:	ksecrets-4.8.1-menu_nodisplay.patch
 BuildRequires:	kdelibs4-devel >= 5:4.8.0
 BuildRequires:	kdebase4-workspace-devel >= 2:4.8.0
 BuildRequires:	pkgconfig(qca2)
@@ -71,7 +66,6 @@ Requires:	kdelibs4-devel
 
 %prep
 %setup -q
-%patch50 -p1 -b .menu_nodisplay
 
 %build
 %cmake_kde4
