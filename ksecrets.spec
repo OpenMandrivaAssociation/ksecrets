@@ -1,5 +1,5 @@
 Name:		ksecrets
-Version:	4.8.3
+Version:	4.8.4
 Release:	1
 Summary:	Secrets management infrastructure for KDE4
 Group:		Graphical desktop/KDE
