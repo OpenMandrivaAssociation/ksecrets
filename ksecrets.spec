@@ -7,6 +7,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+ and LGPLv2+
 URL:		https://projects.kde.org/projects/kde/kdeutils/ksecrets
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	make
 BuildRequires:	kdelibs4-devel >= 5:4.8.0
 BuildRequires:	kdebase4-workspace-devel >= 2:4.8.0
 BuildRequires:	pkgconfig(qca2)
